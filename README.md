@@ -10,13 +10,13 @@ For multi-language plugin:
 - optionally write the Description / Usage sections in several languages
 -->
 ## Description
-Description of your Plugin
+This plugin allows you to use Jarvis to control GPIO from Raspberry hardware
 
 ## Usage
 ```
-You: example of how to trigger the command
-Jarvis: output from Jarvis
+You: *ALLUME/ETEINT*
+Jarvis: C'est fait
 ```
 
 ## Author
-[your name](http://your.website)
+Pierre Quételart(http://www.quetelart.fr)
