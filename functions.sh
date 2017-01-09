@@ -7,5 +7,5 @@
 # XX is a short code for your plugin, ex: ww for Weather Wunderground
 # You can use translations provided in the language folders functions.sh
 jv_pg_gpio_action () {
-        gpio mode $1 out && gpio write $1 $2 && say "C'est fait";;
+        gpio mode $1 out && gpio write $1 $2 && say "C'est fait";
 }
