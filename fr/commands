@@ -1,4 +1,2 @@
-*ALLUME*LUMIERE*==say "$(jv_pg_gpio_action 7 1)"
-*ETEINT*LUMIERE*==say "$(jv_pg_gpio_action 7 0)"
-*ALLUME*HORLOGE*==say "$(jv_pg_gpio_action 5 1)"
-*ETEINT*HORLOGE*==say "$(jv_pg_gpio_action 5 0)"
+*ALLUME*==$(jv_pg_gpio_action 1) && say "C'est fait"
+*ETEINT*==$(jv_pg_gpio_action 0) && say "C'est éteint"
