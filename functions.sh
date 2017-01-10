@@ -15,7 +15,8 @@ jv_pg_gpio_action () {
             break
         fi
     done
-    if [ $key -gt 0 ]; then
+    if [ $key -gt 0 ]
+    then
         /usr/bin/touch "stop_$key"
         case $1 in
             on)
@@ -25,16 +26,17 @@ jv_pg_gpio_action () {
                 gpio mode $key out && gpio write $key 0
                 ;;
             blink)
+                gpio mode $key out
                 while true
                 do
-                    gpio mode $key out && gpio write $key 1
-                    sleep(1)
-                    gpio mode $key out && gpio write $key 1
-                    sleep(1)
+                    gpio write $key 1
+                    sleep 1
+                    gpio write $key 0
+                    sleep 1
                     
-                    if [ -e "stop_$key" ]; then
+                    if [ -e "stop_$key" ]
+                    then
                         break
-                        ;;
                     fi
                 done
                 ;;
