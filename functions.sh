@@ -13,7 +13,6 @@ jv_pg_gpio_action () {
         if [ "$order" == *${jv_pg_gpio_pin[$pin]}* ]; then
             key=$pin
             break
-            ;;
         fi
     done
     if [ $key -gt 0 ]; then
@@ -21,8 +20,10 @@ jv_pg_gpio_action () {
         case $1 in
             on)
                 gpio mode $key out && gpio write $key 1
+                ;;
             off)
                 gpio mode $key out && gpio write $key 0
+                ;;
             blink)
                 while true
                 do
@@ -36,6 +37,7 @@ jv_pg_gpio_action () {
                         ;;
                     fi
                 done
+                ;;
         esac
         /bin/rm "stop_$key"
         return 1
