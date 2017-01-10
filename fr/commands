@@ -1,2 +1,3 @@
-*ALLUME*==$(jv_pg_gpio_action 1) && say "C'est fait"
-*ETEINT*==$(jv_pg_gpio_action 0) && say "C'est éteint"
+*ALLUME*==$(jv_pg_gpio_action on) && say "C'est fait"
+*ETEINT*==$(jv_pg_gpio_action off) && say "C'est éteint"
+*CLIGNOT*==$(jv_pg_gpio_action blink)
