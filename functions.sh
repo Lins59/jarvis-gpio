@@ -1,13 +1,13 @@
 #!/bin/bash
 jv_pg_gpio_action () {
     key=-1
-    order=${order:-$2}
+    device_order=${2:-$order}
 
     for pin in "${!jv_pg_gpio_pin[@]}"
     do
         device=${jv_pg_gpio_pin[pin]}
         regex="^.*${device}.*$"
-        if [[ $order =~ $regex ]]; then
+        if [[ $device_order =~ $regex ]]; then
             key=$pin
             break
         fi
@@ -39,4 +39,12 @@ jv_pg_gpio_action () {
     else
         return 1
     fi
+}
+
+jv_pg_gpio_enter () {
+	jv_pg_gpio_action on coeur
+}
+
+jv_pg_gpio_exit () {
+	jv_pg_gpio_action off coeur
 }
