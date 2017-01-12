@@ -1,1 +1,1 @@
-jv_pg_gpio_pin[4]='cúur'; jv_pg_gpio_pin[5]='horloge'; jv_pg_gpio_pin[6]='lumiËre'
+jv_pg_gpio_pin[4]='c≈ìur'; jv_pg_gpio_pin[5]='horloge'; jv_pg_gpio_pin[6]='lumi√®re'
